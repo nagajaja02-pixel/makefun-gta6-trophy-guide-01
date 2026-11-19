@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI PS5 Tracker</title>
+<meta name="description" content="The complete guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: roadmap to the platinum, cited guides, missable warnings, offline checklist.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial fan guide</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">All 55 trophies, one checklist. Every guide is written in plain words and cites its source. No online trophies — everything is single-player, one playthrough, about 200 hours to the platinum.</p>
+    <div class="progress-wrap" aria-label="Trophy progress">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <p class="progress-text"><strong id="progressCount">0 / 55</strong> earned &middot; <span id="progressPct">0%</span> &middot; <span id="gradeCounts"></span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="panel tools" id="tools">
+    <div class="tools-row">
+      <label class="search-box">
+        <span class="visually-hidden">Search trophies</span>
+        <input type="search" id="searchInput" placeholder="Search trophies, missions, places…" autocomplete="off">
+      </label>
+      <div class="chip-row" id="filterChips" role="group" aria-label="Filter by kind">
+        <button class="chip active" data-filter="all">All 55</button>
+        <button class="chip" data-filter="story">Story</button>
+        <button class="chip" data-filter="activity">Activities</button>
+        <button class="chip" data-filter="collectible">Collectibles</button>
+        <button class="chip" data-filter="crime">Crime</button>
+        <button class="chip" data-filter="world">World</button>
+        <button class="chip" data-filter="money">Money &amp; Property</button>
+        <button class="chip warn" data-filter="missable">Missable</button>
+      </div>
+    </div>
+    <div class="tools-row">
+      <label class="toggle">
+        <input type="checkbox" id="spoilerToggle">
+        <span>Hide story spoilers until earned</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="earnedToggle">
+        <span>Show earned only</span>
+      </label>
+      <div class="spacer"></div>
+      <button class="btn" id="exportBtn" type="button">Export progress</button>
+      <button class="btn" id="importBtn" type="button">Import progress</button>
+      <input type="file" id="importFile" accept=".json,application/json" hidden>
+      <button class="btn danger" id="resetBtn" type="button">Reset</button>
+    </div>
+    <p class="tools-note" id="listMeta"></p>
+  </section>
+
+  <section class="panel list-panel">
+    <h2 id="listHeading">Trophy checklist</h2>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyMsg" hidden>No trophies match this filter.</p>
+  </section>
+
+  <section class="panel roadmap" id="roadmap">
+    <h2>Roadmap to the platinum</h2>
+    <p class="section-lede">Three stages, one playthrough. Story first, the 100% checklist second, cleanup last. Nothing on the checklist is missable — but one trophy is.</p>
+    <div class="stages" id="stages"></div>
+    <div class="missable-callout" id="missableCallout"></div>
+  </section>
+
+  <section class="panel sources" id="sources">
+    <h2>Sources &amp; notes</h2>
+    <ul id="sourceList"></ul>
+    <p>Names, descriptions and grades are the official list as reported on 18 November 2026. Guide text is written in our own words from the sources named beside each trophy; where the exact steps are not yet confirmed by any guide site, the guide says so. This is an unofficial fan guide and is not affiliated with Rockstar Games. Cheats disable trophies and saving.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Guide — an offline checklist. Progress stays in your browser; nothing is uploaded.</p>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
